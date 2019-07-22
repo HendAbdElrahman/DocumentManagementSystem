@@ -1,32 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-// Import the core angular services.
-// import { HttpClient } from "@angular/common/http";
-// import { Injectable } from "@angular/core";
-
-// ----------------------------------------------------------------------------------- //
-// ----------------------------------------------------------------------------------- //
-
-interface ApiUploadResult {
-  url: string;
-}
-
-export interface UploadResult {
-  name: string;
-  type: string;
-  size: number;
-  url: string;
-}
-
-export interface UploadFileResult {
-  UploadDate: Date;
-  LastAccessedDate: Date;
-  LastAccessedUser: string;
-  FileSize: number;
-  FileName: string;
-  FilePhysicalName: string;
-  ID: number;
-}
+import { UploadResult } from "src/app/models/uploadResult";
 
 @Injectable()
 export class UploadService {
@@ -38,26 +12,17 @@ export class UploadService {
     this.httpClient = httpClient;
   }
 
-  onSubmit() {
-    const formData = new FormData();
-    formData.append("file", this.fileData);
-    this.httpClient
-      .post("http://localhost:2055/api/document/", formData)
-      .subscribe(res => {
-        console.log(res);
-        alert("SUCCESS !!");
-      });
-  }
-
   public getAllFiles() {
     return this.httpClient.get("http://localhost:2055/api/document/getAll");
   }
+
   public downloadFile(fileId) {
     return this.httpClient.get(
       "http://localhost:2055/api/document/download/" + fileId,
       { responseType: "blob" }
     );
   }
+
   //Upload Unauthorized User Files
   public async uploadUnauthorizedUserFiles(file: File): Promise<UploadResult> {
     var headers = new HttpHeaders({
@@ -66,6 +31,7 @@ export class UploadService {
     });
     return this.uploadFiles(file, headers);
   }
+
   //Authorized User
   public async uploadFileByAuthorizedUser(file: File): Promise<UploadResult> {
     var headers = new HttpHeaders({ admin: "1", userName: "Hend" });
@@ -82,7 +48,6 @@ export class UploadService {
       var body = {
         formData: formData
       };
-      // var headers = new HttpHeaders({ admin: "1", userName: "Hend" });
 
       this.httpClient
         .post("http://localhost:2055/api/document/", formData, {

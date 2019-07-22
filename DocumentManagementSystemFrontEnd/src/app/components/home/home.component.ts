@@ -2,11 +2,6 @@ import { Component, OnInit } from "@angular/core";
 import { RouterModule, Routes, Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 
-// Components
-import { StudentListComponent } from "../student/list/student-list.component";
-import { StudentDetailsComponent } from "../student/details/student-details.component";
-import { StudentAddComponent } from "../student/add/student-add.component";
-
 // Services
 import { routerTransition } from "../../services/config/config.service";
 import { DocumentUploadComponent } from "../document/document-upload.component";
@@ -46,19 +41,7 @@ export class HomeComponent implements OnInit {
 export const homeChildRoutes: Routes = [
   {
     path: "",
-    component: StudentListComponent
-  },
-  {
-    path: "add",
-    component: StudentAddComponent
-  },
-  {
-    path: "update/:id",
-    component: StudentAddComponent
-  },
-  {
-    path: "detail/:id",
-    component: StudentDetailsComponent
+    component: DocumentUploadComponent
   },
   {
     path: "upload",

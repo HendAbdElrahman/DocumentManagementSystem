@@ -5,15 +5,11 @@ import { Http, ResponseContentType } from "@angular/http";
 import { HttpClient } from "@angular/common/http";
 import { saveFile, saveAs } from "file-saver";
 
-// // Services
-// import { ValidationService } from "../../../services/config/config.service";
-// import { StudentService } from "../../../services/student/student.service";
-// import { routerTransition } from "../../../services/config/config.service";
-
 import { ToastrService } from "ngx-toastr";
-import { UploadResult } from "src/app/services/document/upload.service";
-import { UploadService } from "src/app/services/document/upload.service";
 import { Subject } from "rxjs";
+import { UploadFileResult } from "src/app/models/uploadFileResult";
+import { UploadResult } from "src/app/models/uploadResult";
+import { UploadService } from "src/app/services/document/upload.service";
 @Component({
   selector: "app-document-upload",
   templateUrl: "././document-upload.component.html",
@@ -21,7 +17,7 @@ import { Subject } from "rxjs";
 })
 export class DocumentUploadComponent implements OnInit {
   public uploads: UploadResult[];
-  public data: any[];
+  public data: UploadFileResult[];
 
   private uploadService: UploadService;
   private ngUnsubscribe: Subject<any> = new Subject();
@@ -115,7 +111,7 @@ export class DocumentUploadComponent implements OnInit {
       success => {
         saveAs(success, fileName);
       },
-      err => {
+      error => {
         alert("Server error while downloading file.");
       }
     );
@@ -124,7 +120,7 @@ export class DocumentUploadComponent implements OnInit {
   getAllFiles() {
     this.uploadService.getAllFiles().subscribe(
       result => {
-        this.data = result as any[];
+        this.data = result as UploadFileResult[];
         this.data = [...this.data];
       },
       error => console.error(error)
