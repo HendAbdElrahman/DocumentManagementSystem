@@ -1,7 +1,3 @@
-/**
- * Created By : Sangwin Gawande (http://sangw.in)
- */
-
 import { Component, OnInit } from "@angular/core";
 import { RouterModule, Routes, Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";

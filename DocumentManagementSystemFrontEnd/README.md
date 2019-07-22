@@ -1,40 +1,37 @@
 # Angular 7 - Demo CRUD Application / Project for Beginners
+
 # Student Management
-### Created By [Sangwin Gawande](http://sangw.in)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
 
 ## Feature list
 
- * Admin Login & Logout
- * User Listing
- * User Searching
- * User Details
- * User Addition
- * User Update
- * User Deletion
-
+- Admin Login & Logout
+- User Listing
+- User Searching
+- User Details
+- User Addition
+- User Update
+- User Deletion
 
 ## Angular 4 features used
 
- * Modules
- * Routes
- * Services
- * Components
- * Browser Animations
- * Forms Module
- * Reactive Forms
- * Directives
- * Pipes
- * Filters
- 
+- Modules
+- Routes
+- Services
+- Components
+- Browser Animations
+- Forms Module
+- Reactive Forms
+- Directives
+- Pipes
+- Filters
 
 ## Libraries Used
 
- * W3CSS front end design
- * Font Awesome Icons
- * Toster for Success/Error messages
-
+- W3CSS front end design
+- Font Awesome Icons
+- Toster for Success/Error messages
 
 ## Development server
 

@@ -1,20 +1,15 @@
-/**
- * Created By : Sangwin Gawande (http://sangw.in)
- */
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { LoginComponent } from "./login.component";
 
-import { LoginComponent } from './login.component';
-
-describe('LoginComponent', () => {
+describe("LoginComponent", () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
+      declarations: [LoginComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -23,11 +18,7 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it("should be created", () => {
     expect(component).toBeTruthy();
   });
 });
-
-/**
- * Created By : Sangwin Gawande (http://sangw.in)
- */

@@ -1,12 +1,9 @@
-/*Created By : Sangwin Gawande (http://sangw.in)*/
-
-.align-center{
-	width: 40%;
-	margin: auto;
-}
-.login-card{
-	margin-top: 5%;
-	border-radius: 15px;
+.align-center {
+  width: 40%;
+  margin: auto;
 }
 
-/*Created By : Sangwin Gawande (http://sangw.in)*/
+.login-card {
+  margin-top: 5%;
+  border-radius: 15px;
+}

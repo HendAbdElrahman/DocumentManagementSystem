@@ -80,7 +80,7 @@ export class DocumentUploadComponent implements OnInit {
     const formData = new FormData();
     formData.append("file", this.fileData);
     this.http
-      .post("http://localhost:1640/api/document/", formData)
+      .post("http://localhost:2055/api/document/", formData)
       .subscribe(res => {
         console.log(res);
         alert("SUCCESS !!");

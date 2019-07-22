@@ -49,8 +49,8 @@ namespace DocumentManagementSystemBusiness.Tests
         {
             //arrange
             documentService = new DocumentService (_documentRepository.Object);
-            documentService.saveFile(documentContract);
             //act
+            documentService.saveFile(documentContract);
         }
         [TestMethod]
         public void GetFileById_Success()
@@ -58,8 +58,9 @@ namespace DocumentManagementSystemBusiness.Tests
             //arrange
             _documentRepository.Setup(x => x.GetById(1)).Returns(document);
             documentService = new DocumentService(_documentRepository.Object);
-            Document.Management.System.DataAccess.SQLDB.Models.Document d= documentService.GetById(documentContract.ID);
             //act
+            Document.Management.System.DataAccess.SQLDB.Models.Document d= documentService.GetById(documentContract.ID);
+            //Assert
             Assert.AreEqual(d.FileName, "Hend-File.png");
 
         }
@@ -69,8 +70,9 @@ namespace DocumentManagementSystemBusiness.Tests
             //arrange
             _documentRepository.Setup(x => x.GetAll()).Returns(new List<Document.Management.System.DataAccess.SQLDB.Models.Document>() { document });
             documentService = new DocumentService(_documentRepository.Object);
-            var d = documentService.GetAll();
             //act
+            var d = documentService.GetAll();
+            //Assert
             Assert.AreEqual(d.Count(), 1);
 
         }
