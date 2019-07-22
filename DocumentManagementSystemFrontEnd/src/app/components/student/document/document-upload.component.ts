@@ -62,9 +62,7 @@ export class DocumentUploadComponent implements OnInit {
   public async uploadUnauthorizedUserFiles(files: File[]): Promise<void> {
     for (let file of Array.from(files)) {
       try {
-        this.uploads.push(
-          await this.uploadService.uploadUnauthorizedUserFiles(file)
-        );
+        await this.uploadService.uploadUnauthorizedUserFiles(file);
       } catch (error) {
         console.warn("File upload failed.");
         console.error(error);

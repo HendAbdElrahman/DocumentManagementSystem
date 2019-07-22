@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   // Check if user already logged in
   ngOnInit() {
     if (localStorage.getItem("userData")) {
-      this.router.navigate(["/"]);
+      this.router.navigate(["/upload"]);
     }
   }
 
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
   success(data) {
     if (data.code === 200) {
       localStorage.setItem("userData", JSON.stringify(data.data));
-      this.router.navigate(["/"]);
+      this.router.navigate(["/upload"]);
       this.toastr.success("Success", "Logged In Successfully");
     } else {
       this.toastr.error("Failed", "Invalid Credentials");
