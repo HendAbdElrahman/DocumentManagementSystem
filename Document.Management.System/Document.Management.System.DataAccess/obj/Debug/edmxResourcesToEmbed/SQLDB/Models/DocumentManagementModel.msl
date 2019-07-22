@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DocumentManagementDBModelStoreContainer" CdmEntityContainer="DocumentManagementDBEntities">
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="DocumentManagementDBModel.Document">
+        <MappingFragment StoreEntitySet="Document">
+          <ScalarProperty Name="FilePhysicalName" ColumnName="FilePhysicalName" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+          <ScalarProperty Name="LastAccessedDate" ColumnName="LastAccessedDate" />
+          <ScalarProperty Name="LastAccessedUser" ColumnName="LastAccessedUser" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
