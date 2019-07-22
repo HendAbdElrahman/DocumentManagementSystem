@@ -30,7 +30,7 @@ import {
 } from "./components/home/home.component";
 import { HighlightStudentDirective } from "./directives/highlight-student.directive";
 import { AppRoutingModule } from "./app-routing.module";
-import { DocumentUploadComponent } from "./components/student/document/document-upload.component";
+import { DocumentUploadComponent } from "./components/document/document-upload.component";
 import { UploadService } from "./services/document/upload.service";
 
 @NgModule({

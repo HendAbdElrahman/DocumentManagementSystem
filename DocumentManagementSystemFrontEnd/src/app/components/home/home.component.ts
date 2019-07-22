@@ -9,7 +9,7 @@ import { StudentAddComponent } from "../student/add/student-add.component";
 
 // Services
 import { routerTransition } from "../../services/config/config.service";
-import { DocumentUploadComponent } from "../student/document/document-upload.component";
+import { DocumentUploadComponent } from "../document/document-upload.component";
 
 @Component({
   selector: "app-home",

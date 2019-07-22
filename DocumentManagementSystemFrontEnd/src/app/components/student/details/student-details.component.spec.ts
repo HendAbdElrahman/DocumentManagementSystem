@@ -1,19 +1,18 @@
 /**
- * Created By : Sangwin Gawande (http://sangw.in)
+    
  */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { StudentDetailsComponent } from './student-details.component';
+import { StudentDetailsComponent } from "./student-details.component";
 
-describe('StudentDetailsComponent', () => {
+describe("StudentDetailsComponent", () => {
   let component: StudentDetailsComponent;
   let fixture: ComponentFixture<StudentDetailsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StudentDetailsComponent ]
-    })
-    .compileComponents();
+      declarations: [StudentDetailsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -22,10 +21,10 @@ describe('StudentDetailsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
 /**
- * Created By : Sangwin Gawande (http://sangw.in)
+    
  */

@@ -1,23 +1,23 @@
 /**
- * Created By : Sangwin Gawande (http://sangw.in)
+    
  */
 
-import { TestBed, inject } from '@angular/core/testing';
+import { TestBed, inject } from "@angular/core/testing";
 
-import { ConfigService } from './config.service';
+import { ConfigService } from "./config.service";
 
-describe('ConfigService', () => {
+describe("ConfigService", () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [ConfigService]
     });
   });
 
-  it('should be created', inject([ConfigService], (service: ConfigService) => {
+  it("should be created", inject([ConfigService], (service: ConfigService) => {
     expect(service).toBeTruthy();
   }));
 });
 
 /**
- * Created By : Sangwin Gawande (http://sangw.in)
+    
  */

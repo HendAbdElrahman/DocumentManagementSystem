@@ -12,8 +12,8 @@ export class AppComponent {
   studentsList = [
     {
       id: 1,
-      first_name: "Sangwin",
-      last_name: "Gawande",
+      first_name: "Hend",
+      last_name: "Abd-Elrahman",
       email: "sangwin@yopmail.com",
       phone: 9503733178,
       department: "Science"

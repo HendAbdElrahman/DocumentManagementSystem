@@ -1,23 +1,26 @@
 /**
- * Created By : Sangwin Gawande (http://sangw.in)
+    
  */
 
-import { TestBed, inject } from '@angular/core/testing';
+import { TestBed, inject } from "@angular/core/testing";
 
-import { StudentService } from './student.service';
+import { StudentService } from "./student.service";
 
-describe('StudentService', () => {
+describe("StudentService", () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [StudentService]
     });
   });
 
-  it('should be created', inject([StudentService], (service: StudentService) => {
-    expect(service).toBeTruthy();
-  }));
+  it("should be created", inject(
+    [StudentService],
+    (service: StudentService) => {
+      expect(service).toBeTruthy();
+    }
+  ));
 });
 
 /**
- * Created By : Sangwin Gawande (http://sangw.in)
+    
  */

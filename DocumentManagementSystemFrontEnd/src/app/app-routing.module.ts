@@ -6,7 +6,7 @@ import {
 } from "./components/home/home.component";
 import { AuthService } from "./services/auth/auth.service";
 import { LoginComponent } from "./components/login/login.component";
-import { DocumentUploadComponent } from "./components/student/document/document-upload.component";
+import { DocumentUploadComponent } from "./components/document/document-upload.component";
 
 // Parent Routes
 const routes: Routes = [
