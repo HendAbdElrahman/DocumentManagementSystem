@@ -12,7 +12,6 @@ import { ToastrModule } from "ngx-toastr";
 // Services
 import { AuthService } from "./services/auth/auth.service";
 import { UserService } from "./services/user/user.service";
-import { StudentService } from "./services/student/student.service";
 
 // Pipes
 import { FilterPipe } from "./pipes/filter.pipe";
@@ -20,15 +19,11 @@ import { PhonePipe } from "./pipes/phone.pipe";
 
 // Components
 import { AppComponent } from "./components/index/app.component";
-import { StudentListComponent } from "./components/student/list/student-list.component";
-import { StudentDetailsComponent } from "./components/student/details/student-details.component";
-import { StudentAddComponent } from "./components/student/add/student-add.component";
 import { LoginComponent } from "./components/login/login.component";
 import {
   HomeComponent,
   homeChildRoutes
 } from "./components/home/home.component";
-import { HighlightStudentDirective } from "./directives/highlight-student.directive";
 import { AppRoutingModule } from "./app-routing.module";
 import { DocumentUploadComponent } from "./components/document/document-upload.component";
 import { UploadService } from "./services/document/upload.service";
@@ -36,14 +31,10 @@ import { UploadService } from "./services/document/upload.service";
 @NgModule({
   declarations: [
     AppComponent,
-    StudentListComponent,
-    StudentDetailsComponent,
-    StudentAddComponent,
     LoginComponent,
     HomeComponent,
     FilterPipe,
     PhonePipe,
-    HighlightStudentDirective,
     DocumentUploadComponent
   ],
   imports: [
@@ -60,13 +51,7 @@ import { UploadService } from "./services/document/upload.service";
       preventDuplicates: true
     })
   ],
-  providers: [
-    AuthService,
-    UserService,
-    StudentService,
-    UploadService,
-    HttpClient
-  ],
+  providers: [AuthService, UserService, UploadService, HttpClient],
   bootstrap: [AppComponent]
 })
 

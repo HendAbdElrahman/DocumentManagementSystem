@@ -1,6 +1,5 @@
 ﻿using Document.Management.System.Business.Interfaces.Services;
 using DocumentManagementSystemApi.Attributes;
-using log4net.Core;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;

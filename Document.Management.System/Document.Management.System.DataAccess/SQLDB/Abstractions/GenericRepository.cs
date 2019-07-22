@@ -1,11 +1,8 @@
 ﻿using Document.Management.System.DataAccess.SQLDB.Interfaces.Repositories;
 using Document.Management.System.DataAccess.SQLDB.Models;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Document.Management.System.DataAccess.SQLDB.Abstractions
 {

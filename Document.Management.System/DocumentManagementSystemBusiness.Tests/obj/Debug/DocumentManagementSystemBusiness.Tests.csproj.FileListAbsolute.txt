@@ -120,3 +120,6 @@ E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\DocumentManagementSystemBusiness.Tests\obj\Debug\DocumentManagementSystemBusiness.Tests.csproj.CopyComplete
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\DocumentManagementSystemBusiness.Tests\obj\Debug\DocumentManagementSystemBusiness.Tests.dll
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\DocumentManagementSystemBusiness.Tests\obj\Debug\DocumentManagementSystemBusiness.Tests.pdb
+E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\DocumentManagementSystemBusiness.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\DocumentManagementSystemBusiness.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\DocumentManagementSystemBusiness.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
