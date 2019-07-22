@@ -3,6 +3,7 @@ using DocumentManagementSystemApi.Attributes;
 using log4net.Core;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -62,13 +63,11 @@ namespace DocumentManagementSystemApi.Controllers
                             UploadDate = now,
                             LastAccessedDate = now,
                             LastAccessedUser = userName,
-                            FileSize = int.Parse(fileinfo.Length.ToString()),
+                            FileSize = fileinfo.Length.ToString(),
                             FileName = postedFile.FileName,
                             FilePhysicalName = fileName
                         };
                         _documentService.saveFile(document);
-
-
                     }
                     result = Request.CreateResponse(HttpStatusCode.Created, docfiles);
                 }
@@ -78,12 +77,16 @@ namespace DocumentManagementSystemApi.Controllers
                 }
                 return result;
             }
+            catch (SqlException  ex)
+            {
+                log.Error(ex.Message);
+                throw ex;
+            }
             catch (Exception ex)
             {
                 log.Error(ex.Message);
                 throw ex;
             }
-           
         }
 
         [HttpGet]
@@ -136,6 +139,11 @@ namespace DocumentManagementSystemApi.Controllers
                     new MediaTypeHeaderValue("application/octet-stream");
 
                 return result;
+            }
+            catch (FileNotFoundException ex)
+            {
+                log.Error(ex.Message);
+                throw ex;
             }
             catch (Exception ex)
             {

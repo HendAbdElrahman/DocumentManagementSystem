@@ -46,13 +46,9 @@ namespace DocumentManagementSystemApi
             // Make sure to add a Unity.Configuration to the using statements.
             // container.LoadConfiguration();
 
-            // TODO: Register your type's mappings here.
-            // container.RegisterType<IProductRepository, ProductRepository>();
-            //container.RegisterType(typeof(IDocumentRepository<>), typeof(DocumentRepository<>), new TransientLifetimeManager()); 
             container.RegisterType(typeof(IGenericRepository<>), typeof(GenericRepository<>), new TransientLifetimeManager()); 
             container.RegisterType<IDocumentService, DocumentService>();
 
-            //container.RegisterType(typeof(IDocumentService<>), typeof(GenericRepository<>), new TransientLifetimeManager());
 
         }
     }

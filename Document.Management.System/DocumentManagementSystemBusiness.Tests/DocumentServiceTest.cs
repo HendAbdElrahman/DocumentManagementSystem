@@ -25,7 +25,7 @@ namespace DocumentManagementSystemBusiness.Tests
                 UploadDate = now,
                 LastAccessedDate = now,
                 LastAccessedUser = "Hend",
-                FileSize = 500,
+                FileSize = "500",
                 FileName = "Hend-File.png",
                 FilePhysicalName = "HendPhysical-File.png",
             };
@@ -35,7 +35,7 @@ namespace DocumentManagementSystemBusiness.Tests
                 UploadDate = now,
                 LastAccessedDate = now,
                 LastAccessedUser = "Hend",
-                FileSize = 500,
+                FileSize = "500",
                 FileName = "Hend-File.png",
                 FilePhysicalName = "HendPhysical-File.png",
             };

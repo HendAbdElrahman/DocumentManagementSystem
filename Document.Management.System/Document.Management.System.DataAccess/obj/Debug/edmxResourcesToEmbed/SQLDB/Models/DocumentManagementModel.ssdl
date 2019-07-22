@@ -8,7 +8,7 @@
     <Property Name="UploadDate" Type="datetime" />
     <Property Name="LastAccessedDate" Type="datetime" />
     <Property Name="LastAccessedUser" Type="nvarchar" MaxLength="50" />
-    <Property Name="FileSize" Type="int" />
+    <Property Name="FileSize" Type="nvarchar(max)" />
     <Property Name="FileName" Type="nvarchar(max)" />
     <Property Name="FilePhysicalName" Type="nvarchar(max)" />
   </EntityType>

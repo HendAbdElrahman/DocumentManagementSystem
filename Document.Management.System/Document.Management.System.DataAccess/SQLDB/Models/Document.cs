@@ -7,17 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-
 namespace Document.Management.System.DataAccess.SQLDB.Models
 {
+    using global::System;
+
     public partial class Document
     {
         public int ID { get; set; }
         public Nullable<DateTime> UploadDate { get; set; }
         public Nullable<DateTime> LastAccessedDate { get; set; }
         public string LastAccessedUser { get; set; }
-        public Nullable<int> FileSize { get; set; }
+        public string FileSize { get; set; }
         public string FileName { get; set; }
         public string FilePhysicalName { get; set; }
     }

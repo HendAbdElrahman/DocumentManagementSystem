@@ -13,7 +13,7 @@
           <Property Name="UploadDate" Type="datetime" />
           <Property Name="LastAccessedDate" Type="datetime" />
           <Property Name="LastAccessedUser" Type="nvarchar" MaxLength="50" />
-          <Property Name="FileSize" Type="int" />
+          <Property Name="FileSize" Type="nvarchar(max)" />
           <Property Name="FileName" Type="nvarchar(max)" />
           <Property Name="FilePhysicalName" Type="nvarchar(max)" />
         </EntityType>
@@ -24,6 +24,9 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DocumentManagementDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DocumentManagementDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Documents" EntityType="DocumentManagementDBModel.Document" />
+        </EntityContainer>
         <EntityType Name="Document">
           <Key>
             <PropertyRef Name="ID" />
@@ -32,13 +35,10 @@
           <Property Name="UploadDate" Type="DateTime" Precision="3" />
           <Property Name="LastAccessedDate" Type="DateTime" Precision="3" />
           <Property Name="LastAccessedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="FileSize" Type="Int32" />
+          <Property Name="FileSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="FilePhysicalName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="DocumentManagementDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Documents" EntityType="Self.Document" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -50,11 +50,11 @@
               <MappingFragment StoreEntitySet="Document">
                 <ScalarProperty Name="FilePhysicalName" ColumnName="FilePhysicalName" />
                 <ScalarProperty Name="FileName" ColumnName="FileName" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
-                <ScalarProperty Name="LastAccessedDate" ColumnName="LastAccessedDate" />
-                <ScalarProperty Name="LastAccessedUser" ColumnName="LastAccessedUser" />
                 <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="LastAccessedUser" ColumnName="LastAccessedUser" />
+                <ScalarProperty Name="LastAccessedDate" ColumnName="LastAccessedDate" />
+                <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -17,7 +17,7 @@ namespace Document.Management.System.Business.Services
 
         public IQueryable<DataAccess.SQLDB.Models.Document> GetAll()
         {
-           return _documentRepository.GetAll().AsQueryable();
+           return _documentRepository.GetAll().OrderByDescending(a=>a.LastAccessedDate).AsQueryable();
         }
 
         public DataAccess.SQLDB.Models.Document GetById(object id)

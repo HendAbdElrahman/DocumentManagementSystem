@@ -12,7 +12,7 @@ namespace Document.Management.System.Business.Contracts
        DateTime? UploadDate { get; set; }
        DateTime? LastAccessedDate { get; set; }
        string LastAccessedUser { get; set; }
-       int? FileSize { get; set; }
+       string FileSize { get; set; }
        string FileName { get; set; }
        string FilePhysicalName { get; set; }
     }
