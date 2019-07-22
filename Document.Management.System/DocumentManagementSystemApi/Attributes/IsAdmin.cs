@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web;
+using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 
@@ -16,13 +17,7 @@ namespace DocumentManagementSystemApi.Attributes
         {
             var isAdmin = HttpContext.Current.Request.Headers["admin"];
             if(isAdmin !="1")
-            {
-                //return;
-                //return actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized);
-                throw new Exception("UnAutherized");
-            }
-
-            // pre-processing
+                throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.Unauthorized));
         }
 
         public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext)
@@ -30,8 +25,8 @@ namespace DocumentManagementSystemApi.Attributes
             var objectContent = actionExecutedContext.Response.Content as ObjectContent;
             if (objectContent != null)
             {
-                var type = objectContent.ObjectType; //type of the returned object
-                var value = objectContent.Value; //holding the returned value
+                var type = objectContent.ObjectType; 
+                var value = objectContent.Value; 
             }
 
         }

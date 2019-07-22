@@ -1,12 +1,12 @@
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\bin\Debug\Document.Management.System.Business.dll
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\bin\Debug\Document.Management.System.Business.pdb
-E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\obj\Debug\Document.Management.System.Business.csproj.CoreCompileInputs.cache
-E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\obj\Debug\Document.Management.System.Business.dll
-E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\obj\Debug\Document.Management.System.Business.pdb
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\bin\Debug\Document.Management.System.DataAccess.dll
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\bin\Debug\EntityFramework.dll
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\bin\Debug\Document.Management.System.DataAccess.pdb
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\bin\Debug\Document.Management.System.DataAccess.dll.config
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\bin\Debug\EntityFramework.xml
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\obj\Debug\Document.Management.System.Business.csprojAssemblyReference.cache
+E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\obj\Debug\Document.Management.System.Business.csproj.CoreCompileInputs.cache
 E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\obj\Debug\Document.Management.System.Business.csproj.CopyComplete
+E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\obj\Debug\Document.Management.System.Business.dll
+E:\Hend\CV\Friss\Demo Friss\Demooooooooooooo\Angular-7-Demo-App-master\Document.Management.System\Document.Management.System.Business\obj\Debug\Document.Management.System.Business.pdb

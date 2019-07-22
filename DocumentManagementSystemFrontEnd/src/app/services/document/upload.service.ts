@@ -58,15 +58,31 @@ export class UploadService {
       { responseType: "blob" }
     );
   }
-  public async uploadFile(file: File): Promise<UploadResult> {
+  //Upload Unauthorized User Files
+  public async uploadUnauthorizedUserFiles(file: File): Promise<UploadResult> {
+    var headers = new HttpHeaders({
+      admin: "0",
+      userName: "Unauthorized User Hend"
+    });
+    return this.uploadFiles(file, headers);
+  }
+  //Authorized User
+  public async uploadFileByAuthorizedUser(file: File): Promise<UploadResult> {
+    var headers = new HttpHeaders({ admin: "1", userName: "Hend" });
+    return this.uploadFiles(file, headers);
+  }
+
+  public async uploadFiles(
+    file: File,
+    headers: HttpHeaders
+  ): Promise<UploadResult> {
     try {
       const formData = new FormData();
-      // formData.append("file", this.fileData);
       formData.append("file", file, file.name);
       var body = {
         formData: formData
       };
-      var headers = new HttpHeaders({ admin: "1", userName: "Hend" });
+      // var headers = new HttpHeaders({ admin: "1", userName: "Hend" });
 
       this.httpClient
         .post("http://localhost:2055/api/document/", formData, {
@@ -74,17 +90,21 @@ export class UploadService {
         })
         .subscribe(
           res => {
-            console.log(res);
             alert("SUCCESS !!");
           },
-          error => console.error(error)
+          error => {
+            if (error.status == 401) alert("Unauthorized User");
+            else {
+              alert(error.statusText);
+            }
+          }
         );
 
       return {
         name: file.name,
         type: file.type,
         size: file.size,
-        url: "" //result.url
+        url: ""
       };
     } catch (error) {
       console.log(error.ExceptionMessage);

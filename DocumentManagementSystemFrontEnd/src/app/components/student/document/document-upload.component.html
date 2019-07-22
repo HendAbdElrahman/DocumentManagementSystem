@@ -30,9 +30,14 @@
 
   <div class="w3-container" *ngIf="data">
     <div class="w3-panel w3-round-small w3-teal">
-      <input #fileInput type="file" [multiple]="true" class="upload__input"
-        (change)="uploadFiles( fileInput.files ) ; fileInput.value = null;" />
+      Upload By Authorized User
+      <input #fileInputAuthorized type="file" [multiple]="true" class="upload__input"
+        (change)="uploadFiles( fileInputAuthorized.files ) ; fileInputAuthorized.value = null;" />
 
+
+      Upload By Unauthorized User
+      <input #fileInput type="file" [multiple]="true" class="upload__input"
+        (change)="uploadUnauthorizedUserFiles( fileInput.files ) ; fileInput.value = null;" />
     </div>
     <div class="w3-panel w3-green" *ngIf="(data | filter:filterData).length === 0">
       <h3>Oh no</h3>
@@ -42,19 +47,19 @@
       *ngIf="(data | filter:filterData | filter:filterData).length != 0">
       <table class="w3-table w3-striped w3-bordered">
         <tr>
-          <th><i class="w3-medium custom-icon fa fa-refresh"></i> File No.</th>
-          <th><i class="w3-medium custom-icon fa fa-user"></i> File Name</th>
-          <th><i class="w3-medium custom-icon fa fa-user"></i> File Size</th>
-          <th><i class="w3-medium custom-icon fa fa-envelope-o"></i> User</th>
-          <th><i class="w3-medium custom-icon fa fa-phone"></i> LastAccessedDate</th>
+          <th><i class="w3-medium custom-icon"></i> File No.</th>
+          <th><i class="w3-medium custom-icon fa fa-envelope-o"></i> File Name</th>
+          <th><i class="w3-medium custom-icon fa fa-shield"></i> File Size</th>
+          <th><i class="w3-medium custom-icon fa  fa fa-user"></i> User</th>
+          <th><i class="w3-medium custom-icon fa fa-calendar"></i> LastAccessedDate</th>
           <th><i class="w3-medium custom-icon fa fa-pencil"></i> Download</th>
         </tr>
         <tr *ngFor="let file of data | filter:filterData; index as i;" appHighlightStudent>
           <td>{{i +1}}</td>
-          <td class="pointer" [routerLink]="['detail', i]">{{file.FileName}} </td>
-          <td class="pointer" [routerLink]="['detail', i]">{{file.FileSize}}</td>
-          <td class="pointer" [routerLink]="['detail', i]">{{file.LastAccessedUser}}</td>
-          <td class="pointer" [routerLink]="['detail', i]">{{file.LastAccessedDate}}</td>
+          <td class="pointer">{{file.FileName}} </td>
+          <td class="pointer">{{file.FileSize}}</td>
+          <td class="pointer">{{file.LastAccessedUser}}</td>
+          <td class="pointer">{{file.LastAccessedDate |  date:'MM/dd/yyyy @ h:mma'}}</td>
           <td><button (click)="downloadFile(file.ID,file.FileName);" class="w3-button w3-blue">Download</button></td>
         </tr>
       </table>
